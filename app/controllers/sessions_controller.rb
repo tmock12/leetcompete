@@ -9,4 +9,9 @@ class SessionsController < ApplicationController
       redirect_to :new, alert: "Invalid email or password"
     end
   end
+
+  def destroy
+    sign_out
+    redirect_to root_path, notice: "you have signed out"
+  end
 end

@@ -9,10 +9,10 @@
   %body
     %header
       - if signed_in?
-        = link_to "sign out", #
+        = link_to "sign out", :sign_out
       -else
         = link_to "sign in", new_session_path
-      = link_to "sign up", new_user_path
+        = link_to "sign up", new_user_path
       - flash.keys.each do |type|
         .flash{ class: type }
           %p= flash[type]

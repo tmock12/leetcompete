@@ -1,5 +1,4 @@
 Fabricator(:user) do
-  email           "MyString"
-  password_digest "MyString"
-  username        "MyString"
+  password "password"
+  password_confirmation "password"
 end

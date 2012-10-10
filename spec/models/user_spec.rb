@@ -1,5 +1,22 @@
 require 'spec_helper'
 
 describe User do
-  pending "add some examples to (or delete) #{__FILE__}"
+
+  describe "#name" do
+    let(:user) { Fabricate(:user, email: "email@example.com", username: username) }
+
+    subject { user.name }
+
+    context 'username is present' do
+      let(:username) { "Bobbiey" }
+      it { should == "Bobbiey" }
+    end
+
+    context 'with no username' do
+      let(:username) { nil }
+      it { should == "email@example.com" }
+    end
+
+  end
+
 end

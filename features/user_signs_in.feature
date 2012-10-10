@@ -17,7 +17,7 @@ Feature: User signs in
       | Email    | test@example.com |
       | Password | password         |
     And I press "Sign in"
-    Then I should be on the home page
+    Then I should be on the "dashboard" page
     And I should see "signed in as test@example.com"
     And I should see "sign out"
 

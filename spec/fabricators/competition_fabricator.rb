@@ -1,0 +1,2 @@
+Fabricator(:competition) do
+end

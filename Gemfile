@@ -1,12 +1,14 @@
 source 'https://rubygems.org'
 
-gem 'authem', git: 'git://github.com/paulelliott/authem.git'
+gem "bcrypt-ruby", :require => "bcrypt"
+# gem 'authem', git: 'git://github.com/paulelliott/authem.git'
 gem 'decent_exposure', '2.0.0.rc1'
 gem 'formal'
 gem 'gmaps4rails'
 gem 'haml-rails'
 gem 'jquery-rails'
-gem 'keymaker'
+gem 'keymaker', git: 'git://github.com/therubymug/keymaker.git'
+gem 'neo4j-cypher'
 gem 'rails', '3.2.8'
 gem 'sqlite3'
 
@@ -24,7 +26,7 @@ group :test do
 end
 
 group :test, :development do
-  gem 'fabrication'
+  gem 'fabrication', git: "https://github.com/paulelliott/fabrication.git"
   gem 'pry'
 end
 

@@ -6,6 +6,7 @@ gem 'formal'
 gem 'gmaps4rails'
 gem 'haml-rails'
 gem 'jquery-rails'
+gem 'keymaker'
 gem 'rails', '3.2.8'
 gem 'sqlite3'
 

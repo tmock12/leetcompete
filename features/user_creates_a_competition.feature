@@ -1,4 +1,4 @@
-@http://www.pivotaltracker.com/story/show/37543113
+@http://www.pivotaltracker.com/story/show/37543113 @javascript
 Feature: User creates a competition
   As a user
   I want to create a competition
@@ -26,3 +26,4 @@ Feature: User creates a competition
     And I select "12/10/2012" as the date
     And I press "Create competition"
     Then I should be on that competition's page
+    And I should see a map

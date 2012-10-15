@@ -36,3 +36,15 @@ end
 Then /^I should see "([^"]*)"$/ do |text|
   page.should have_content(text)
 end
+
+Then "show me the page" do
+  save_and_open_page
+end
+
+When "I pry" do
+  require 'pry'; binding.pry
+end
+
+Then "I should see a map" do
+  page.should have_xpath("//div[@class='map_container']")
+end

@@ -10,4 +10,9 @@ class Users::CompetitionsController < ApplicationController
     end
   end
 
+  def destroy
+    current_user.competitions.find(params[:id]).destroy
+    redirect_to dashboard_path, notice: "competition has been deleted"
+  end
+
 end

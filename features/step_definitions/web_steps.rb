@@ -1,3 +1,7 @@
+Given /^I am on my dashboard$/ do
+  visit("/dashboard")
+end
+
 Given /^I am on the home page$/ do
   visit(root_path)
 end

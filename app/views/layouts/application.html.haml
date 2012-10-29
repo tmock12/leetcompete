@@ -10,7 +10,6 @@
     %header
       - if signed_in?
         = link_to "sign out", :sign_out
-        = link_to "new competition", new_user_competition_path(current_user)
       -else
         = link_to "sign in", new_session_path
         = link_to "sign up", new_user_path

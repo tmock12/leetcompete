@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
 
   attr_accessible :email, :username, :password, :password_confirmation
 
-  has_many :competitions
+  has_many :competitions, dependent: :destroy
 
   def name
     username or email

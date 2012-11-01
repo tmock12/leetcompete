@@ -1,4 +1,5 @@
 = link_to "Delete Competition", user_competition_path(competition), method: :delete, confirm: "Are you sure?"
+= link_to "Edit Competition", edit_user_competition_path(competition)
 - competition_attributes.each do |key, value|
   %dl
     %dt= key

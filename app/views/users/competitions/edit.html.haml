@@ -1,0 +1,4 @@
+= form_for user_competition, url: user_competition_path(user_competition), builder: Formal::Builder do |f|
+  %dl
+    = render partial: 'form', locals: { f: f }
+    = f.submit "Update competition"

@@ -1,30 +1,4 @@
 = form_for competition, url: user_competitions_path(current_user), builder: Formal::Builder do |f|
   %dl
-    = f.label :title
-    = f.text_field :title
-
-    = f.label :start_at, "Start Date"
-    = f.datetime_select(:start_at, use_month_numbers: true)
-
-    = f.label :end_at, "End Date"
-    = f.datetime_select(:end_at, use_month_numbers: true)
-
-    = f.label :location
-    = f.text_field :location
-
-    = f.label :max_competitors
-    = f.text_field :max_competitors
-
-    = f.label :registration_expiration
-    = f.datetime_select(:registration_expiration, use_month_numbers: true)
-
-    = f.label :sport, "Type"
-    = f.text_field :sport
-
-    = f.label :description
-    = f.text_area :description
-
-    = f.label :price, "Registration Price"
-    = f.number_field :price
-
+    = render partial: 'form', locals: { f: f }
     = f.submit "Create competition"

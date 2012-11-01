@@ -32,13 +32,12 @@ Then /^I should be on the home page$/ do
   current_path.should == root_path
 end
 
-Then "I should be on that competition's page" do
-  competition = Competition.last
-  current_path.should == competition_path(competition)
-end
-
 Then /^I should see "([^"]*)"$/ do |text|
   page.should have_content(text)
+end
+
+Then /^I should not see "([^"]*)"$/ do |text|
+  page.should_not have_content(text)
 end
 
 Then "show me the page" do

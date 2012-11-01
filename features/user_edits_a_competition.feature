@@ -22,3 +22,8 @@ Feature: User edits a competition
     Then I should be on that competition's page
     And I should see a map
     And I should see "Surf Hawaii"
+
+  Scenario: User2 attempts to edit User's competition
+    Given  I am signed in as user2
+    When I visit User's competition
+    Then I should not see "Edit Competition"

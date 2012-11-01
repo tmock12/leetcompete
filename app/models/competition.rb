@@ -3,9 +3,11 @@ class Competition < ActiveRecord::Base
 
   belongs_to :user
 
+  validates :user, :location, :title,  presence: true
+
   acts_as_gmappable
 
   def gmaps4rails_address
-    self.location
+    self.location || ''
   end
 end

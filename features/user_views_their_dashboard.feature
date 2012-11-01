@@ -5,10 +5,10 @@ Feature: User views their dashboard
       | email    | test@example.com |
       | password | password         |
     And that user has the following competitions:
-      | title      | description         |
-      | Surf Event | Straight up surfing |
-      | Ski Event  | awesome skiiing     |
-      | Skate Pro  | skating for life    |
+      | title      | description         | location |
+      | Surf Event | Straight up surfing | Hawaii   |
+      | Ski Event  | awesome skiiing     | Colorado |
+      | Skate Pro  | skating for life    | Atlanta  |
     When I follow "sign in"
     And I fill in the following:
       | Email    | test@example.com |

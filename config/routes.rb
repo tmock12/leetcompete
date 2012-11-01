@@ -4,6 +4,7 @@ Leetcompete::Application.routes.draw do
   resources :users, only: [:new, :create] do
     resources :competitions, controller: 'users/competitions'
   end
+
   resources :sessions
   resources :competitions, only: :show
 

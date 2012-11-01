@@ -25,7 +25,7 @@ When /^I press "([^"]*)"$/ do |button_name|
 end
 
 Then /^I should be on the "([^"]*)" page$/ do |path_name|
-  current_path.should == send("#{path_name}_path")
+  current_path.should == send("#{path_name.parameterize('_')}_path")
 end
 
 Then /^I should be on the home page$/ do

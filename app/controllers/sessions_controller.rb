@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
       sign_in(user, false)
       redirect_to dashboard_path, notice: "signed in as #{user.name}"
     else
-      redirect_to :new, alert: "Invalid email or password"
+      redirect_to new_session_path, alert: "Invalid email or password"
     end
   end
 
